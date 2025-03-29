@@ -1,0 +1,13 @@
+{
+  "name": "prof-website",
+  "version": "1.0.0",
+  "description": "Professor Abolaji's Personal Website",
+  "scripts": {
+    "dev": "cd prof-web && npm run dev",
+    "build": "cd prof-web && npm run build",
+    "start": "cd prof-web && npm run start"
+  },
+  "dependencies": {
+    "next-auth": "^4.24.5"
+  }
+}

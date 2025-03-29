@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Neuroprotective effects of antioxidant compounds from selected Nigerian medicinal plants in rotenone-induced models of Parkinson's disease",
+    "authors": "Abolaji A, Omotuyi IO, Oyeleye SI, Ogunsuyi OB, Alabi OT",
+    "abstract": "This study investigated the neuroprotective potential of naturally occurring antioxidant compounds isolated from medicinal plants traditionally used in Nigeria. Our findings demonstrate significant protective effects against rotenone-induced neurotoxicity in both in vitro and in vivo models, suggesting therapeutic potential for Parkinson's disease.",
+    "doi": "10.1016/j.neurotox.2021.12.005",
+    "year": 2022,
+    "status": "published"
+  },
+  {
+    "id": 2,
+    "title": "Mitochondrial dysfunction in the pathogenesis of neurodegenerative diseases: Mechanistic insights and therapeutic potentials",
+    "authors": "Abolaji A, Adedara IO, Ajayi BO, Khalil AA, Farombi EO",
+    "abstract": "This comprehensive review explores the central role of mitochondrial dysfunction in neurodegenerative pathology. We analyze current evidence on the biochemical mechanisms linking mitochondrial impairment to neuronal death and discuss promising therapeutic strategies targeting mitochondrial function.",
+    "doi": "10.1016/j.neuro.2020.07.008",
+    "year": 2021,
+    "status": "published"
+  },
+  {
+    "id": 3,
+    "title": "Protective effect of Garcinia kola seed extract against oxidative stress-induced neurodegeneration in Drosophila melanogaster",
+    "authors": "Abolaji A, Kamdem JP, Lugokenski TH, Nascimento TK, Waczuk EP, Farombi EO, Rocha JBT",
+    "abstract": "This study evaluated the antioxidant and neuroprotective properties of Garcinia kola seed extract in Drosophila melanogaster. Results demonstrated significant protection against hydrogen peroxide-induced oxidative stress and improvement in locomotor performance, suggesting potential applications in neurodegenerative disease treatment.",
+    "doi": "10.1016/j.jep.2019.11.036",
+    "year": 2020,
+    "status": "published"
+  },
+  {
+    "id": 4,
+    "title": "Novel biomarkers for early detection of environmental toxin exposure in vulnerable populations",
+    "authors": "Abolaji A, Adedara IO, Khalil AA, Williams RT",
+    "abstract": "This ongoing research aims to identify novel biomarkers for early detection of environmental toxin exposure in vulnerable populations. We are developing a panel of biochemical markers with high sensitivity and specificity for various classes of agricultural and industrial pollutants.",
+    "doi": "10.1016/j.pending.2024.01.001",
+    "year": 2024,
+    "status": "ongoing"
+  },
+  {
+    "id": 5,
+    "title": "Mechanistic studies on the neuroprotective properties of kolaviron: A computational and experimental approach",
+    "authors": "Abolaji A, Johnson DB, Oladejo MA, Rocha JBT",
+    "abstract": "This ongoing study combines computational modeling and experimental validation to elucidate the precise molecular mechanisms through which kolaviron exerts its neuroprotective effects. Initial in silico predictions have identified several promising protein targets which are currently being validated through in vitro experiments.",
+    "doi": "10.1016/j.pending.2023.12.005",
+    "year": 2023,
+    "status": "ongoing"
+  }
+] 

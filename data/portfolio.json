@@ -1,0 +1,63 @@
+{
+  "sections": [
+    {
+      "id": 1,
+      "title": "Research Portfolio",
+      "description": "Explore our diverse research portfolio, showcasing groundbreaking work in biochemistry, neurodegenerative diseases, and natural product pharmacology.",
+      "subsections": [
+        {
+          "id": 1,
+          "title": "Neurodegenerative Diseases",
+          "description": "Investigating the roles of oxidative stress and mitochondrial dysfunction in neurodegenerative disorders.",
+          "items": [
+            {
+              "id": 1,
+              "title": "Drosophila Models Study",
+              "description": "Investigation of oxidative stress mechanisms in neurodegenerative disorders using Drosophila models.",
+              "category": "research",
+              "image": "/images/portfolio/neuro-research.jpg",
+              "link": "https://example.com/neuro-research"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Natural Product Research",
+          "description": "Exploring bioactive compounds from African medicinal plants for therapeutic applications.",
+          "items": [
+            {
+              "id": 2,
+              "title": "Medicinal Plant Analysis",
+              "description": "Study of bioactive compounds from African medicinal plants with potential therapeutic applications.",
+              "category": "research",
+              "image": "/images/portfolio/natural-products.jpg",
+              "link": "https://example.com/natural-products"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Projects & Initiatives",
+      "description": "Our ongoing projects and initiatives aimed at advancing scientific knowledge and community development.",
+      "subsections": [
+        {
+          "id": 3,
+          "title": "Environmental Studies",
+          "description": "Research and initiatives focused on environmental health and toxicology.",
+          "items": [
+            {
+              "id": 3,
+              "title": "Toxicology Assessment",
+              "description": "Assessment of environmental toxins impact on agricultural communities.",
+              "category": "project",
+              "image": "/images/portfolio/env-toxicology.jpg",
+              "link": "https://example.com/env-toxicology"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 

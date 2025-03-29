@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "Novel Drosophila Models for Neurodegenerative Disease Studies",
+    "description": "Development of transgenic Drosophila lines expressing key proteins implicated in Parkinson's and Alzheimer's diseases to facilitate high-throughput screening of potential therapeutic compounds.",
+    "researchers": "Prof. Abolaji A, Dr. Omotuyi IO, Dr. Oyeleye SI",
+    "period": "2022-2025",
+    "fundingSource": "National Research Foundation Grant #NRF-2022-45678",
+    "status": "ongoing"
+  },
+  {
+    "id": 2,
+    "title": "Protective Effects of Nigerian Medicinal Plants Against Neuroinflammation",
+    "description": "Investigation of anti-inflammatory properties of selected Nigerian medicinal plant extracts in cellular and animal models of neuroinflammation, with focus on microglia activation pathways.",
+    "researchers": "Prof. Abolaji A, Dr. Adedara IO, Dr. Farombi EO",
+    "period": "2023-2026",
+    "fundingSource": "University Research Grant #URG-2023-12345",
+    "status": "ongoing"
+  },
+  {
+    "id": 3,
+    "title": "Biomarkers of Environmental Toxin Exposure in Agricultural Communities",
+    "description": "Identification and validation of biochemical markers for detecting exposure to agrochemicals in farming communities, with emphasis on developing accessible diagnostic tools for resource-limited settings.",
+    "researchers": "Prof. Abolaji A, Dr. Ajayi BO, Dr. Khalil AA",
+    "period": "2021-2024",
+    "fundingSource": "Environmental Protection Agency Grant #EPA-2021-98765",
+    "status": "ongoing"
+  },
+  {
+    "id": 4,
+    "title": "Mitochondrial Dysfunction in Age-Related Cognitive Decline",
+    "description": "Investigation of the relationship between mitochondrial function, oxidative stress, and cognitive performance in aging populations, with the goal of identifying potential intervention targets.",
+    "researchers": "Prof. Abolaji A, Dr. Smith J, Prof. Williams R",
+    "period": "2020-2023",
+    "status": "completed"
+  },
+  {
+    "id": 5,
+    "title": "Neuroprotective Mechanisms of Kolaviron Against Oxidative Stress",
+    "description": "Detailed characterization of the molecular pathways through which kolaviron, a biflavonoid from Garcinia kola, protects against oxidative stress-induced neuronal damage.",
+    "researchers": "Prof. Abolaji A, Dr. Adeleye AO, Prof. Rocha JBT",
+    "period": "2021-2024",
+    "fundingSource": "Medical Research Council Grant #MRC-2021-56789",
+    "status": "completed"
+  }
+] 
