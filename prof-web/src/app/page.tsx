@@ -9,18 +9,12 @@ import { HomePage, HomepageSection } from "../app/api/homepage/_data";
 
 async function getHomepageData() {
   try {
-    // In Next.js App Router, we need different approaches for server vs client
-    let url;
-    
-    if (typeof window !== 'undefined') {
-      // Client-side - use window.location
-      url = `/api/homepage`;
-    } else {
-      // Server-side - construct a URL with a valid origin
-      url = process.env.VERCEL_URL 
-        ? `https://${process.env.VERCEL_URL}/api/homepage` 
-        : 'http://localhost:3000/api/homepage';
-    }
+    // For Next.js App Router, we need to use a more consistent URL approach
+    const url = new URL('/api/homepage', 
+      typeof window !== 'undefined' 
+        ? window.location.origin 
+        : 'http://localhost:3000'
+    ).toString();
     
     const res = await fetch(url, {
       next: { revalidate: 60 }, // Revalidate every 60 seconds
