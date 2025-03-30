@@ -9,8 +9,7 @@ import { HomePage, HomepageSection } from "../app/api/homepage/_data";
 
 async function getHomepageData() {
   try {
-    // In Next.js App Router, relative URLs should work for API routes
-    // but we need to make sure it's a valid URL format with origin
+    // In Next.js App Router, we need different approaches for server vs client
     let url;
     
     if (typeof window !== 'undefined') {
@@ -18,7 +17,9 @@ async function getHomepageData() {
       url = `/api/homepage`;
     } else {
       // Server-side - construct a URL with a valid origin
-      url = `http://localhost:3000/api/homepage`;
+      url = process.env.VERCEL_URL 
+        ? `https://${process.env.VERCEL_URL}/api/homepage` 
+        : 'http://localhost:3000/api/homepage';
     }
     
     const res = await fetch(url, {

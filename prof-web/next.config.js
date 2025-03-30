@@ -1,20 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "example.com",
-      },
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
+    domains: ["example.com", "images.unsplash.com"],
+    unoptimized: true,
     dangerouslyAllowSVG: true,
   },
   typescript: {
@@ -28,6 +16,12 @@ const nextConfig = {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
+  },
+  experimental: {
+    serverComponentsExternalPackages: [],
+  },
+  env: {
+    VERCEL_URL: process.env.VERCEL_URL || "",
   },
 };
 
