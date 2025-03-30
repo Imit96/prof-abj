@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "cd prof-web && npm install typescript @types/react @types/node --no-save && npm run build",
-  "outputDirectory": "prof-web/.next",
-  "installCommand": "npm install && cd prof-web && npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
   "framework": "nextjs",
   "regions": ["iad1"],
   "public": true,
