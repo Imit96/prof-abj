@@ -6,6 +6,5 @@
   "framework": "nextjs",
   "regions": ["iad1"],
   "public": true,
-  "cleanUrls": true,
-  "rootDirectory": "prof-web"
+  "cleanUrls": true
 } 
