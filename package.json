@@ -4,7 +4,7 @@
   "description": "Professor Abolaji's Personal Website",
   "scripts": {
     "dev": "cd prof-web && npm run dev",
-    "build": "cd prof-web && npm run build",
+    "build": "cd prof-web && NODE_ENV=production npx next build",
     "start": "cd prof-web && npm run start"
   },
   "dependencies": {
