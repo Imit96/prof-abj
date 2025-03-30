@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Professor Abolaji's Personal Website",
   "scripts": {
-    "dev": "cd prof-web && npm run dev",
-    "build": "cd prof-web && npm install typescript @types/react @types/node --no-save && NODE_ENV=production npx next build",
-    "start": "cd prof-web && npm run start"
+    "dev": "if [ -d 'prof-web' ]; then cd prof-web && npm run dev; else next dev; fi",
+    "build": "if [ -d 'prof-web' ]; then cd prof-web && npm install && npm run build; else npm install && next build; fi",
+    "start": "if [ -d 'prof-web' ]; then cd prof-web && npm run start; else next start; fi"
   },
   "dependencies": {
     "next-auth": "^4.24.5"

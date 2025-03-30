@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "cd prof-web && npm install && npm run build",
-  "outputDirectory": "prof-web/.next",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
   "framework": "nextjs",
   "regions": ["iad1"],
   "public": true,
