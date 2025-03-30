@@ -8,14 +8,20 @@ import { ArrowRight, BookOpen, Calendar, FileText, GraduationCap, MessageCircle,
 import { HomePage, HomepageSection } from "../app/api/homepage/_data";
 
 async function getHomepageData() {
-  // Define base URL based on environment
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
-  
   try {
-    // Use relative URL to avoid CORS issues in production
-    const apiUrl = baseUrl ? `${baseUrl}/api/homepage` : '/api/homepage';
+    // In Next.js App Router, relative URLs should work for API routes
+    // but we need to make sure it's a valid URL format with origin
+    let url;
     
-    const res = await fetch(apiUrl, {
+    if (typeof window !== 'undefined') {
+      // Client-side - use window.location
+      url = `/api/homepage`;
+    } else {
+      // Server-side - construct a URL with a valid origin
+      url = `http://localhost:3000/api/homepage`;
+    }
+    
+    const res = await fetch(url, {
       next: { revalidate: 60 }, // Revalidate every 60 seconds
     });
     
