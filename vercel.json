@@ -1,6 +1,8 @@
 {
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "buildCommand": "cd prof-web && npm install typescript @types/react @types/node --no-save && npm run build",
   "outputDirectory": "prof-web/.next",
-  "buildCommand": "cd prof-web && npm install typescript @types/react @types/node --no-save && NODE_ENV=production npx next build",
   "installCommand": "npm install && cd prof-web && npm install",
-  "framework": "nextjs"
+  "framework": null,
+  "rootDirectory": "prof-web"
 } 
