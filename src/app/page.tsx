@@ -99,6 +99,27 @@ export default function Home() {
 
 
 
+    /* ── About section — staggered column entrance ── */
+    ScrollTrigger.create({
+      trigger: '.about-section',
+      start: 'top 78%',
+      onEnter: () => {
+        gsap.fromTo('.about-col-1',
+          { opacity: 0, x: -40 },
+          { opacity: 1, x: 0, duration: 1.1, ease: 'power3.out' }
+        );
+        gsap.fromTo('.about-col-2',
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 1.1, ease: 'power3.out', delay: 0.15 }
+        );
+        gsap.fromTo('.about-col-3',
+          { opacity: 0, x: 40 },
+          { opacity: 1, x: 0, duration: 1.1, ease: 'power3.out', delay: 0.28 }
+        );
+      },
+      once: true,
+    });
+
     /* ── Philosophy pillars ── */
     gsap.utils.toArray('.pillar-card').forEach((card: any, i) => {
       gsap.fromTo(card,
@@ -291,9 +312,133 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          SECTION 2 — STATS / SOCIAL PROOF BAR
+          SECTION 2 — ABOUT THE PROFESSOR (Bento layout)
       ═══════════════════════════════════════════════════════════ */}
+      <section className="about-section bg-[#F4F4F0] py-20 md:py-28 px-6 md:px-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.1fr_1fr] gap-6 items-start">
 
+          {/* ── Column 1: Heading + bio + curved arrow watermark ── */}
+          <div className="about-col-1 relative flex flex-col gap-6 pt-4">
+            <h2 className="font-serif text-4xl md:text-5xl text-primary font-bold leading-tight">
+              About the<br />Professor
+            </h2>
+            <p className="font-sans text-sm text-ink/65 leading-relaxed max-w-xs">
+              Professor Abolaji has spent over two decades decoding how environmental toxicants
+              compromise human health — using <em>Drosophila melanogaster</em> as a
+              high-fidelity living model. His work bridges the microscopic and the global,
+              from a Ibadan laboratory bench to policy conversations across Africa.
+            </p>
+            <Link
+              href="/cv"
+              className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.22em] font-bold text-primary border-b border-primary/30 pb-0.5 w-fit hover:border-secondary hover:text-secondary transition-all duration-300"
+            >
+              Full CV →
+            </Link>
+
+            {/* Curved arrow watermark */}
+            <div className="absolute -bottom-8 left-4 opacity-[0.07] pointer-events-none select-none" aria-hidden>
+              <svg width="160" height="140" viewBox="0 0 160 140" fill="none">
+                <path
+                  d="M20 120 Q60 20 140 30"
+                  stroke="#0F172A"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+                <path
+                  d="M125 18 L143 32 L126 44"
+                  stroke="#0F172A"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+              </svg>
+            </div>
+          </div>
+
+          {/* ── Column 2: Stat card on top + large portrait below ── */}
+          <div className="about-col-2 flex flex-col gap-5">
+            {/* Stat card */}
+            <div className="bg-white rounded-2xl p-7 shadow-sm border border-primary/5">
+              {/* Globe icon */}
+              <div className="w-11 h-11 rounded-full border border-primary/15 flex items-center justify-center mb-5">
+                <svg className="w-5 h-5 text-primary/50" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3.6 9h16.8M3.6 15h16.8M12 3a14.4 14.4 0 010 18M12 3a14.4 14.4 0 000 18" strokeLinecap="round"/>
+                </svg>
+              </div>
+              <p className="font-serif text-5xl font-bold text-primary mb-2">200+</p>
+              <p className="font-sans text-sm text-ink/55 leading-snug">
+                Peer-reviewed publications spanning toxicology,<br className="hidden sm:block" /> biochemistry &amp; pharmacology
+              </p>
+            </div>
+
+            {/* Portrait photo */}
+            <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10">
+              <Image
+                src="/prof-img/IMG_1826.JPG"
+                alt="Professor Amos Abolaji in the laboratory"
+                fill
+                className="object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+            </div>
+          </div>
+
+          {/* ── Column 3: Thumbnail with link + bullet credentials ── */}
+          <div className="about-col-3 flex flex-col gap-7 pt-2">
+            {/* Thumbnail with arrow link */}
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-primary/10 group">
+              <Image
+                src="/prof-img/IMG_1837.JPG"
+                alt="Professor Abolaji at a conference"
+                fill
+                className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                style={{ transition: 'transform 0.7s ease, filter 0.7s ease' }}
+              />
+              <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors duration-500" />
+              {/* Arrow link button */}
+              <Link
+                href="/personal"
+                className="absolute top-3 right-3 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-secondary transition-colors duration-300"
+                aria-label="Learn more about Professor Abolaji"
+              >
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <path d="M7 17L17 7M17 7H7M17 7v10" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </Link>
+            </div>
+
+            {/* Credential bullets */}
+            <div className="flex flex-col gap-5">
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 mt-0.5">
+                  <svg className="w-3.5 h-3.5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15 3.293 9.879a1 1 0 011.414-1.414L8.414 12.172l6.879-6.879a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <p className="font-sans text-sm text-ink/70 leading-relaxed">
+                  With 20+ years in academia, Professor Abolaji has forged a research identity anchored in
+                  rigorous science, African capacity-building, and real-world toxicological impact.
+                </p>
+              </div>
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 mt-0.5">
+                  <svg className="w-3.5 h-3.5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15 3.293 9.879a1 1 0 011.414-1.414L8.414 12.172l6.879-6.879a1 1 0 011.414 0z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <p className="font-sans text-sm text-ink/70 leading-relaxed">
+                  Founder of the Drosophila Research and Training Centre — cultivating the next
+                  generation of African biochemists through hands-on training and mentorship.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
 
       {/* ═══════════════════════════════════════════════════════════
           SECTION 3 — THE BELIEF (Storyline 04 anchor)
