@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #0F172A;
+  --color-secondary: #D4AF37;
+  --color-background: #FAFAFA;
+  --color-ink: #1E293B;
+  --color-drosophila: #C84B31;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smoothing; avoid conflict with CSS scroll-behavior */
+}
+
+body {
+  background-color: theme('colors.background');
+  color: theme('colors.ink');
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Brand-coloured text selection */
+::selection {
+  background-color: #D4AF37;
+  color: #0F172A;
+}
+
+/* Focus rings for keyboard accessibility */
+:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 3px;
+}
